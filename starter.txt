@@ -1,0 +1,55 @@
+# 1번
+"def solution(number1, number2):
+    answer = number1 + number2
+    return answer"
+
+# 3번
+def solution(number1, number2):
+    answer = number1 - number2
+    return answer
+
+# 4번
+def solution(number1, number2):
+    answer = number1 * number2
+    return answer
+
+# 5번
+def solution(number1, number2):
+    answer = number1 / number2 * 100
+    return int(answer)
+
+# 6번
+def solution(number1, number2):
+    answer = number1 // number2
+    return answer
+
+# 7번
+def solution(number1, number2):
+    answer = number1 % number2
+    return answer
+
+# 8번
+def solution(number, exponent):
+    answer = number ** exponent
+    return answer
+
+# 9번
+def solution(number):
+    answer = number **0.5
+    return int(answer)
+
+# 10번
+def solution(number1, number2):
+    if number1 > number2:
+        answer = number1
+    else:
+        answer = number2
+    return answer
+
+# 11번
+def solution(number):
+    if number % 2 == 0 :
+        answer = '짝수'
+    else:
+        answer = '홀수'
+    return answer
