@@ -53,3 +53,43 @@ def solution(number):
     else:
         answer = '홀수'
     return answer
+
+# 12번
+def solution(number):
+    if number > 0:
+        answer = "POSITIVE"
+    elif number == 0 :
+        answer = "ZERO"
+    else:
+        answer = "NEGATIVE"
+    return answer
+
+# 13번
+def solution(number, start, end):
+    if start <= number <= end:
+        answer = "YES"
+    else:
+        answer = "NO"
+    return answer
+
+# 14번
+def solution(score):
+    if score >= 90 :
+        answer = "A"
+    elif score >= 80:
+        answer = "B"
+    elif score >= 70:
+        answer = "C"
+    elif score >= 60:
+        answer = "D"
+    else:
+        answer = "F"
+    return answer
+
+# 15번
+def solution(year):
+    if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:
+        answer = "YES"
+    else:
+        answer = "NO"
+    return answer
