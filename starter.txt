@@ -93,3 +93,65 @@ def solution(year):
     else:
         answer = "NO"
     return answer
+
+# 16번
+def solution(weight, height):
+    bmi = weight / (height*height)
+    if bmi >= 25 :
+        answer = "비만"
+    elif  bmi >= 23 :
+        answer = "과체중"
+    elif bmi >= 18.5:
+        answer = "정상"
+    else:
+        answer = "저체중"
+    return answer
+
+# 17번
+def solution(totalPrice, membership, paymentMethod):
+    if totalPrice >= 500000:
+        answer = totalPrice * 0.85
+    elif totalPrice >= 300000:
+        answer = totalPrice * 0.9
+    elif totalPrice >= 100000:
+        answer = totalPrice * 0.95
+
+    if membership == "실버":
+        answer = answer * 0.97
+    elif membership == "골드":
+        answer = answer * 0.95
+    elif membership == "플래티넘":
+        answer = answer * 0.9
+    
+    if paymentMethod == "신용카드":
+        answer
+    elif paymentMethod == "현금":
+        answer = answer * 0.98
+
+    if totalPrice >= 500000 and membership == "플래티넘" and paymentMethod == "현금":
+        answer = answer - 50000
+
+    return int(answer)
+
+# 18번
+def solution(start, end):
+    answer = 0
+    for i in range(start, end+1):
+        answer += i
+    return answer
+
+# 19번
+def solution(start, end):
+    answer = 0
+    for i in range(start, end+1):
+        if i % 2 ==0:
+            answer += i
+    return answer
+
+# 20번
+def solution(start, end, number):
+    answer = 0
+    for i in range(start, end+1):
+        if i % number ==0:
+            answer += i
+    return answer
