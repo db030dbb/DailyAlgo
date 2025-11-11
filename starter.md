@@ -64,6 +64,8 @@ def solution(number1, number2):
     return answer
 ```
 
+---
+
 # 11번
 ```
 def solution(number):
@@ -194,6 +196,8 @@ def solution(start, end, number):
     return answer
 ```
 
+---
+
 # 21번
 ```
 def solution(start, end):
@@ -224,3 +228,5 @@ def solution(start, end):
 - `break`를 쓰는 이유
     ex) i = 12 이면 `for a in range(2, i):` 이 for문이 
     처음 2로 시작할 때부터 `is_prime = False` 가 나오는데 break 를 안 쓰면 마지막 11까지 나누게 되는 불필요한 실행이 생김
+
+---
