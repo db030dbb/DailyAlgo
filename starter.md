@@ -211,15 +211,16 @@ def solution(start, end):
             answer += 1
     return answer
 ```
-`is_prime = True` : 소수입니다. 가정
+- `is_prime = True` : 소수입니다. 가정
 
-for 문 안에 `is_prime = True` 쓰는 이유
-    ex) is_prime = True 를 for 문 밖에 쓰면
-        i = 6, is_prime = False -> 여기서 is_prime = True 가 False 로 재할당됨
-        i = 7, is_prime = False -> is_prime = True 로 재할당 되는 식이 없어서 7이 소수여도 False 가 나타남
+- for 문 안에 `is_prime = True` 쓰는 이유   
+    ex) is_prime = True 를 for 문 밖에 쓰면   
+        i = 6, is_prime = False -> 여기서 is_prime = True 가 False 로 재할당됨   
+        i = 7, is_prime = False -> is_prime = True 로 재할당 되는 식이 없어서 7이 소수여도 False 가 나타남   
 
-`for a in range(2, i):` 에서 i+1 이 아니라 i 를 쓰는 이유
-    : i+1 일 경우, for문 맨 마지막이 i ÷ i = 1 로 i가 소수여도 나머지가 0으로 `is_prime = False`로 나옴
+- `for a in range(2, i):` 에서 i+1 이 아니라 i 를 쓰는 이유   
+    : i+1 일 경우, for문 맨 마지막이 i ÷ i = 1 로 i가 소수여도 나머지가 0으로 `is_prime = False`로 나옴   
 
-`break`를 쓰는 이유
-    ex) i = 12 이면 `for a in range(2, i):` 이 for문이 처음 2로 시작할 때부터 `is_prime = False` 가 나오는데 break 를 안 쓰면 11까지 나누게 되는 불필요한 실행이 생김
+- `break`를 쓰는 이유
+    ex) i = 12 이면 `for a in range(2, i):` 이 for문이 
+    처음 2로 시작할 때부터 `is_prime = False` 가 나오는데 break 를 안 쓰면 마지막 11까지 나누게 되는 불필요한 실행이 생김
