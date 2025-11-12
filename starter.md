@@ -230,3 +230,24 @@ def solution(start, end):
     처음 2로 시작할 때부터 `is_prime = False` 가 나오는데 break 를 안 쓰면 마지막 11까지 나누게 되는 불필요한 실행이 생김
 
 ---
+
+# 22번
+
+1. 첫번째 방법 : 문자열로 바꾸기
+```
+def solution(number):
+    answer = str(number)
+    return len(answer)
+```
+
+2. 두번째 방법 : 10으로 나눈 횟수
+```
+def solution(number):
+    answer = 0
+    while number > 0:
+        number = number // 10
+        answer += 1
+    return answer
+```
+
+- while 반복문은 조건이 참일 때까지만 반복
