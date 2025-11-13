@@ -251,3 +251,25 @@ def solution(number):
 ```
 
 - while 반복문은 조건이 참일 때까지만 반복
+
+---
+
+# 23번 (25.11.13.)
+- 내가 푼 식
+```
+def solution(number):
+    answer = str(number)
+    sum = 0
+    for i in range(0, len(answer)):
+        sum += int(answer[i])
+    return sum
+```
+- 더 간단한 방법
+```
+def solution(number):
+    answer = 0
+    for i in str(number):
+        answer += int(i)
+    return answer
+```
+---
