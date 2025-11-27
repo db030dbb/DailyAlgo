@@ -272,4 +272,31 @@ def solution(number):
         answer += int(i)
     return answer
 ```
+
 ---
+
+# 24번 (25.11.27)
+- 내가 푼 식 (range 쓰는 것 주의)
+```
+def solution(start, end):
+    answer = 0
+    for i in range(start, end+1):
+        for a in range(1, 10):
+            answer += i * a
+    return answer
+```
+- 다른 방법
+> 1+2+3+4+5+6+7+8+9 = 45
+> 2단의 합 = 2×1+2×2+ ··· +2×9 = 2×(1+2+ ··· +9) = 2 × 45
+> 3단의 합 = 3 × 45
+> n단의 합  = n × 45
+```
+def solution(start, end):
+    answer = 0
+    for i in range(start, end+1):
+        answer += i * 45
+    return answer
+```
+
+---
+
