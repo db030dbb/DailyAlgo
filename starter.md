@@ -300,3 +300,36 @@ def solution(start, end):
 
 ---
 
+# 25번 (25.11.28)
+- 내가 푼 방법
+```
+def solution(number):
+    answer = 0
+    for i in range(1, number+1):
+        if i == 1 : 
+            answer += 1
+        else : 
+            for a in range(1,i+1):
+                if i % a == 0:
+                    answer += a
+    return answer
+```
+
+- 다른 방법
+  > number 가 5인 경우에 1은 몇 번 더해지는가? ∴ 5번 (1의 약수, 2의 약수, ··· 5의 약수)
+  > 1은 1,2,3,4,5의 약수 -> 5번 (5//1=5)
+  > 2은 2,4의 약수 -> 2번 (5//2=2)
+  > 3은 3의 약수 -> 1번 (5//3=1)
+  > 4은 4의 약수 -> 1번 (5//4=1)
+  > 5은 5의 약수 -> 1번 (5//5=1)
+  > 따라서 각 숫자 i 는 number // i 번 더해진다.
+```
+def solution(number):
+    answer = 0
+    for i in range(1, number+1):
+        answer += i * (number // i)  
+    return answer
+```
+
+---
+
