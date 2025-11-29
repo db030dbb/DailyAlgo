@@ -333,3 +333,29 @@ def solution(number):
 
 ---
 
+# 26번 (25.11.29)
+체감 난이도 상.. 나중에 꼭 다시 풀어보기!(소수 문제 다 다시 풀기)   
+```
+def solution(start, end):
+    primes = []
+    for num in range(start, end+1):
+        is_prime = True
+        if num == 1:
+            is_prime = False
+        else :
+            for i in range(2, num):
+                if num % i == 0:
+                    is_prime = False
+                    break
+        if is_prime == True:
+            primes.append(num)
+    
+    answer = 0
+    for a in range(len(primes)):
+        for b in range(a+1, len(primes)):
+            answer += primes[a] * primes[b]
+    return answer
+```
+
+---
+
