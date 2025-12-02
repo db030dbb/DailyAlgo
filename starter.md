@@ -359,3 +359,11 @@ def solution(start, end):
 
 ---
 
+# 31번 (2025.12.02)
+```
+def solution(word):
+    answer = len(word)
+    return answer
+```
+
+---
