@@ -367,3 +367,31 @@ def solution(word):
 ```
 
 ---
+
+# 32번 (2025.12.03)
+```
+def solution(word, c):
+    answer = 0
+    for i in range(len(word)):
+        if word[i] == c:
+            answer += 1
+    return answer
+```
+
+- 다른 풀이 방법 1
+```
+def solution(word, c):
+    answer = 0
+    for char in word:
+        if char == c:
+            answer += 1
+    return answer
+```
+   
+- 다른 풀이 방법 2
+```
+def solution(word, c):
+    return word.count(c)
+```
+
+---
