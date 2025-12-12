@@ -403,3 +403,16 @@ def solution(word, c):
 # *** 다른 풀이 방법 2 ***
 def solution(word, c):
     return word.count(c)
+
+
+# -------------------------------------------------
+#  33번 : 문자열에서 모음 개수 세기 (2025.12.12)
+# -------------------------------------------------
+# !!! range 왜 자꾸 빼먹니 !!!
+def solution(word):
+    answer = 0
+    for i in range(0, len(word)):
+        if word[i] in ("a", "e", "i", "o", "u"):
+            answer += 1
+    return answer
+
