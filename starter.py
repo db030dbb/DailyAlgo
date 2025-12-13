@@ -416,3 +416,11 @@ def solution(word):
             answer += 1
     return answer
 
+
+# -------------------------------------------------
+#  34번 : 문자열 포매팅 (2025.12.13)
+# -------------------------------------------------
+def solution(word):
+    lens = len(word)
+    answer = (f"{word} is {lens}")
+    return answer
