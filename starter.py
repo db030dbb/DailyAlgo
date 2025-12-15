@@ -424,3 +424,20 @@ def solution(word):
     lens = len(word)
     answer = (f"{word} is {lens}")
     return answer
+
+
+# -------------------------------------------------
+#  35번 : 문자열의 덧셈 (2025.12.15)
+# -------------------------------------------------
+def solution(word1, word2):
+    answer = word1 + word2
+    return answer
+
+
+# -------------------------------------------------
+#  36번 : 문자열의 곱셈 (2025.12.15)
+# -------------------------------------------------
+def solution(word, n):
+    answer = word * n
+    return answer
+
