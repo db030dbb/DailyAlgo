@@ -441,3 +441,57 @@ def solution(word, n):
     answer = word * n
     return answer
 
+
+# -------------------------------------------------
+#  37번 : 문자열 자르기 (2026.2.3)
+# -------------------------------------------------
+def solution(word, start, end):
+    answer = word[start:end+1]
+    return answer
+# !!! word[0:3] -> word 의 인덱스 0~2까지만 추출 !!!
+
+
+# -------------------------------------------------
+#  38번 : 문자열 뒤집기 (2026.2.3)
+# -------------------------------------------------
+def solution(word):
+    answer = word[::-1]
+    return answer
+# !!! word[::-1] -> 처음부터 끝까지 거꾸로 추출 !!!
+
+
+# -------------------------------------------------
+#  40번 : 부분 문자열 개수 세기 (2026.2.3)
+# -------------------------------------------------
+def solution(word, target):
+    answer = 0
+    for i in range(0, len(word)+1):
+        if word[i:i+len(target)] == target:
+            answer += 1
+    return answer
+# !!! 다시 풀어보기, 접근도 못함, 수학적으로 접근하기 !!!
+
+
+# -------------------------------------------------
+#  41번 : 문자열 수정하기 (2026.2.3)
+# -------------------------------------------------
+def solution(word, oldString, newString):
+    answer = ""
+    for i in range(0, len(word)+1):
+        if word[i:i+len(oldString)] == oldString:
+            answer = word[0:i] + newString + word[i+len(oldString):len(word)+1]
+    return answer
+# !!! 40번 응용 -> 다시 풀어보면 좋음 !!!
+
+
+# -------------------------------------------------
+#  42번 : 문자열 제거하기 (2026.2.3)
+# -------------------------------------------------
+def solution(word, target):
+    answer = ""
+    for i in range(0,len(word)+1):
+        if word[i:i+len(target)] == target:
+            answer = word[0:i] + word[i+len(target):len(word)+1]
+    return answer
+
+# !!! 40번 응용2 -> word[0:i] : 0부터 i-1까지 추출 !!!
