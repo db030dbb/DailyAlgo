@@ -495,3 +495,67 @@ def solution(word, target):
     return answer
 
 # !!! 40번 응용2 -> word[0:i] : 0부터 i-1까지 추출 !!!
+
+
+# -------------------------------------------------
+#  43번 : 배열의 길이 구하기 (2026.2.5)
+# -------------------------------------------------
+def solution(numbers):
+    answer = len(numbers)
+    return answer
+
+
+# -------------------------------------------------
+#  44번 : 배열의 특정 원소 개수 구하기 1 (2026.2.5)
+# -------------------------------------------------
+def solution(n, numbers):
+    answer = 0
+    for i in numbers:
+        if  i == n:
+            answer += 1
+    return answer
+
+
+# -------------------------------------------------
+#  45번 : 배열의 특정 원소 개수 구하기 2 (2026.2.5)
+# -------------------------------------------------
+def solution(numbers):
+    answer = 0
+    for i in numbers:
+        is_prime = True
+        if i == 1 :
+            is_prime = False
+        else:
+            for n in range(2, i):
+                if i % n == 0:
+                    is_prime = False
+                    break
+
+        if is_prime == True:
+            answer += 1
+    return answer
+# !!! 소수 구하기 이제 좀 외우자... !!!
+
+
+# -------------------------------------------------
+#  46번 : 배열 원소의 최솟값 찾기 (2026.2.5)
+# -------------------------------------------------
+def solution(numbers):
+    answer = numbers[0]
+    for i in numbers:
+        if answer > i:
+            answer = i
+    return answer
+
+# !!! answer=0 으로 하면 양수만 있는 애들은 답이 0으로 나옴 !!!
+
+
+# -------------------------------------------------
+#  47번 : 배열 원소의 최댓값 찾기 (2026.2.5)
+# -------------------------------------------------
+def solution(numbers):
+    answer = numbers[0]
+    for i in numbers:
+        if answer < i :
+            answer = i
+    return answer
