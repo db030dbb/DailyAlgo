@@ -559,3 +559,83 @@ def solution(numbers):
         if answer < i :
             answer = i
     return answer
+
+
+# -------------------------------------------------
+#  48번 : 배열 원소의 총합 구하기 (2026.2.6)
+# -------------------------------------------------
+def solution(numbers):
+    answer = 0
+    for i in numbers:
+        answer += i
+    return answer
+
+
+# -------------------------------------------------
+#  49번 : 배열 원소의 평균 구하기 (2026.2.6)
+# -------------------------------------------------
+# -- 내가 쓴 식 --
+def solution(numbers):
+    answer = 0
+    cnt = 0
+    for i in numbers:
+        answer += i
+        cnt += 1
+    means = answer / cnt
+    return means
+
+# -- 더 간단한 방식 --
+def solution(numbers):
+    answer = sum(numbers) / len(numbers)
+    means = round(answer, 1)
+    return means
+# !!! statistics 모듈 사용하면(from statistics import mean) mean() 함수 사용 가능!!
+
+
+# -------------------------------------------------
+#  50번 : 배열에서 가장 많은 원소와 개수 구하기 (2026.2.6)
+# -------------------------------------------------
+def solution(numbers):
+    answer = []
+    count = 0
+    num = 0
+    for i in numbers:
+        cnt = numbers.count(i)
+        if cnt > count:
+            count = cnt
+            num = i
+    answer.append(num)
+    answer.append(count)
+    return answer
+# !!! 다시 풀어보기 !!
+
+
+# -------------------------------------------------
+#  51번 : 두 배열에서 겹치는 원소 찾기 (2026.2.6)
+# -------------------------------------------------
+def solution(numbers1, numbers2):
+    answer = []
+    for i in numbers1:
+        if i in numbers2:
+            answer.append(i)
+    answer.sort()
+    return answer
+
+# !!! .sort() 는 원래 리스트 정렬, sorted(answer)은 새로운 리스트로 반환 !!
+# !!! 내림차순은 reverse = True 괄호 안에 넣어주기 !!
+
+
+# -------------------------------------------------
+#  52번 : 두 배열에서 겹치지 않는 원소 찾기 (2026.2.6)
+# -------------------------------------------------
+def solution(numbers1, numbers2):
+    answer = []
+    for i in numbers1:
+        if i not in numbers2:
+            answer.append(i)
+    for num in numbers2:
+        if num not in numbers1:
+            answer.append(num)
+    answer.sort()
+    return answer
+
